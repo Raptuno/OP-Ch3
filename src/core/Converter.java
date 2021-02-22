@@ -23,26 +23,12 @@ public class Converter {
 		 */
 		
 		output=new String[bitCalc(s)];
-		System.out.println("Bits Calculados: "+bitCalc(s));
 		int dtbInput=Integer.parseInt(s);
 		
 		for(int i=0; i<output.length; i++) {
 			output[i]=String.valueOf(dtbInput%2);
 			dtbInput=dtbInput/2;
 		}
-		
-		/*
-		do {
-			dtbInput=dtbInput/2;
-			dtbOutput=dtbOutput.concat(String.valueOf(dtbInput%2));
-			
-			if(dtbInput/2==0) {
-				dtbInput=dtbInput/2;
-				dtbOutput=dtbOutput.concat(String.valueOf(dtbInput%2));
-				break;
-			}
-		} while(dtbInput/2!=0);
-		*/
 		Collections.reverse(Arrays.asList(output));
 	}
 	
@@ -55,7 +41,6 @@ public class Converter {
 		for (int i=0; i<output.length; i++) {
 			opt=opt.concat(output[i]);
 		}
-		System.out.println(opt);
 		return opt;
 	}
 }
