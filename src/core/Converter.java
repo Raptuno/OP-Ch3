@@ -1,16 +1,15 @@
 package core;
-import java.io.*;
+
+import java.util.Arrays;
+import java.util.Collections;
 
 public class Converter {
-	String[] input;
-	String output;
+	String[] output;
 	
-	//Función inicializadora
-	public void initializer(String s) {
-		input=new String[s.length()];
-		for(int i=0; i<input.length; i++) {
-			input[i]=String.valueOf(s.charAt(i));
-		}
+	//Función inicializadora para la conversión a binario
+	public int bitCalc(String s) { //Método para calcular tamaño de bits
+		int bci=Integer.parseInt(s);
+		return (int)(Math.log(bci)/Math.log(2)+1);
 	}
 	
 	//Inicia cadena de funciones de cálculo
@@ -23,25 +22,40 @@ public class Converter {
 		 * 4. Repetir los pasos hasta que el cociente sea igual a 0
 		 */
 		
+		output=new String[bitCalc(s)];
+		System.out.println("Bits Calculados: "+bitCalc(s));
 		int dtbInput=Integer.parseInt(s);
-		String dtbOutput=new String();
 		
+		for(int i=0; i<output.length; i++) {
+			output[i]=String.valueOf(dtbInput%2);
+			dtbInput=dtbInput/2;
+		}
+		
+		/*
 		do {
 			dtbInput=dtbInput/2;
-			System.out.println(dtbInput);
 			dtbOutput=dtbOutput.concat(String.valueOf(dtbInput%2));
+			
+			if(dtbInput/2==0) {
+				dtbInput=dtbInput/2;
+				dtbOutput=dtbOutput.concat(String.valueOf(dtbInput%2));
+				break;
+			}
 		} while(dtbInput/2!=0);
+		*/
+		Collections.reverse(Arrays.asList(output));
 	}
 	
-	public void DecToOct () {
+	public void DecToOct () { //Decimal a Octal
 		
-	}
-	
-	public String[] getInput() {
-		return input;
 	}
 	
 	public String getOutput(){
-		return output;
+		String opt=new String();
+		for (int i=0; i<output.length; i++) {
+			opt=opt.concat(output[i]);
+		}
+		System.out.println(opt);
+		return opt;
 	}
 }
