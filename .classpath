@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="dcmt"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/RaptunoCyborg/.p2/pool/plugins/org.eclipse.osgi_3.16.100.v20201030-1916.jar" sourcepath="C:/Users/RaptunoCyborg/.p2/pool/plugins/org.eclipse.osgi_3.16.100.v20201030-1916.jar"/>
 	<classpathentry kind="lib" path="C:/Users/RaptunoCyborg/.p2/pool/plugins/org.eclipse.core.commands_3.9.800.v20201021-1339.jar" sourcepath="C:/Users/RaptunoCyborg/.p2/pool/plugins/org.eclipse.core.commands_3.9.800.v20201021-1339.jar"/>
 	<classpathentry kind="lib" path="C:/Users/RaptunoCyborg/.p2/pool/plugins/org.eclipse.equinox.common_3.14.0.v20201102-2053.jar" sourcepath="C:/Users/RaptunoCyborg/.p2/pool/plugins/org.eclipse.equinox.common_3.14.0.v20201102-2053.jar"/>
@@ -19,9 +14,5 @@
 	<classpathentry kind="lib" path="C:/Users/RaptunoCyborg/.p2/pool/plugins/org.eclipse.ui.workbench_3.122.0.v20201122-1345.jar" sourcepath="C:/Users/RaptunoCyborg/.p2/pool/plugins/org.eclipse.ui.workbench_3.122.0.v20201122-1345.jar"/>
 	<classpathentry kind="lib" path="C:/Users/RaptunoCyborg/.p2/pool/plugins/com.ibm.icu_67.1.0.v20200706-1749.jar" sourcepath="C:/Users/RaptunoCyborg/.p2/pool/plugins/com.ibm.icu_67.1.0.v20200706-1749.jar"/>
 	<classpathentry kind="lib" path="C:/Users/RaptunoCyborg/.p2/pool/plugins/org.eclipse.ui.forms_3.11.0.v20201025-0656.jar" sourcepath="C:/Users/RaptunoCyborg/.p2/pool/plugins/org.eclipse.ui.forms_3.11.0.v20201025-0656.jar"/>
-	<classpathentry kind="lib" path="E:/swt-chromium-4.18-win32-win32-x86_64.zip"/>
-	<classpathentry kind="lib" path="/swt.chromium/chromium-library"/>
-	<classpathentry kind="lib" path="/swt.chromium/org.eclipse.swt.chromium"/>
-	<classpathentry kind="lib" path="/swt.chromium/org.eclipse.swt.chromium.feature"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
