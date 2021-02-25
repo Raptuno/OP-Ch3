@@ -25,6 +25,7 @@ import org.eclipse.swt.events.KeyEvent;
 
 public class SwtMain {
 
+	int kpre;
 	Clipboard cb=new Clipboard(Display.getDefault());
 	protected Shell shlConversorDeNmeros;
 	SwtHelp swth;
@@ -71,12 +72,6 @@ public class SwtMain {
 		Converter converter=new Converter();
 		
 		shlConversorDeNmeros = new Shell();
-		shlConversorDeNmeros.addKeyListener(new KeyAdapter() {
-			@Override
-			public void keyReleased(KeyEvent e) {
-				helpListener();
-			}
-		});
 		shlConversorDeNmeros.setSize(354, 199);
 		shlConversorDeNmeros.setText("Conversor de N\u00FAmeros");
 		shlConversorDeNmeros.setLayout(new FormLayout());
@@ -133,6 +128,7 @@ public class SwtMain {
 		cmpCbBtns.setLayout(new GridLayout(1, false));
 		
 		Button btnCopiar = new Button(cmpCbBtns, SWT.NONE);
+		btnCopiar.setEnabled(false);
 		btnCopiar.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -176,11 +172,15 @@ public class SwtMain {
 						} //Fin del Switch-case
 					}
 				}
+				if(!btnCopiar.isEnabled()) {
+					btnCopiar.setEnabled(true);
+				}
 			}
 		});
 		btnConvertir.setText("Convertir");
 		
 		Button btnAyuda = new Button(cmpBotones, SWT.NONE);
+		btnAyuda.setEnabled(false);
 		btnAyuda.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
