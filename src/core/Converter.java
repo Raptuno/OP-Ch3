@@ -6,19 +6,19 @@ import java.util.Collections;
 public class Converter {
 	String[] output;
 	
-	//Función inicializadora para la conversión a binario
-	public int bitCalc(String s) { //Método para calcular tamaño de bits
+	//Funciï¿½n inicializadora para la conversiï¿½n a binario
+	public int bitCalc(String s) { //Mï¿½todo para calcular tamaï¿½o de bits
 		int bci=Integer.parseInt(s);
 		return (int)(Math.log(bci)/Math.log(2)+1);
 	}
 	
-	//Inicia cadena de funciones de cálculo
+	//Inicia cadena de funciones de cï¿½lculo
 	public void DecToBin (String s){ //Decimal a Binario
-		/* Pasos de conversión
+		/* Pasos de conversiÃ³n
 		 * 
-		 * 1. Dividir el número entre 2
-		 * 2. Obtener el cociente entero para la siguiente iteración
-		 * 3. Obtener el residuo del dígito binario
+		 * 1. Dividir el nÃºmero entre 2
+		 * 2. Obtener el cociente entero para la siguiente iteraciÃ³n
+		 * 3. Obtener el residuo del dÃ­gito binario
 		 * 4. Repetir los pasos hasta que el cociente sea igual a 0
 		 */
 		
@@ -32,8 +32,16 @@ public class Converter {
 		Collections.reverse(Arrays.asList(output));
 	}
 	
-	public void DecToOct () { //Decimal a Octal
+	public void DecToOct (String s) { //Decimal a Octal
+		/* Pasos para la conversiÃ³n
+		 * 
+		 * Nota: Todos los nÃºmeros menores que o iguales a 7 se mantienen iguales
+		 * 
+		 * Paso 1: Si el nÃºmero es mayor a 7
+		 * 
+		 */
 		
+		int input=Integer.parseInt(s); 
 	}
 	
 	public String getOutput(){
